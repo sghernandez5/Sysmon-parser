@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Events>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+      <EventID>1</EventID>
+      <Version>5</Version>
+      <Level>4</Level>
+      <Task>1</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8000000000000000</Keywords>
+      <TimeCreated SystemTime="2024-12-07T11:05:41.2231190Z" />
+      <EventRecordID>5610</EventRecordID>
+      <Correlation />
+      <Execution ProcessID="4028" ThreadID="5711" />
+      <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+      <Computer>acct-ws11.condef.local</Computer>
+      <Security UserID="S-1-5-18" />
+   </System>
+   <EventData>
+      <Data Name="RuleName">technique_id=T1087,technique_name=Account Discovery</Data>
+      <Data Name="UtcTime">2024-12-07 11:05:41.210</Data>
+      <Data Name="ProcessGuid">{f3565dc0-e6d5-674c-d807-000000000c00}</Data>
+      <Data Name="ProcessId">3120</Data>
+      <Data Name="Image">C:\Windows\System32\net.exe</Data>
+      <Data Name="FileVersion">10.0.26100.1882 (WinBuild.160101.0800)</Data>
+      <Data Name="Description">Net Command</Data>
+      <Data Name="Product">Microsoft® Windows® Operating System</Data>
+      <Data Name="Company">Microsoft Corporation</Data>
+      <Data Name="OriginalFileName">net.exe</Data>
+      <Data Name="CommandLine">net.exe user /domain</Data>
+      <Data Name="CurrentDirectory">C:\Users\pwhite\</Data>
+      <Data Name="User">CONDEF\pwhite</Data>
+      <Data Name="LogonGuid">{f3565dc0-4c19-674c-3908-160000000000}</Data>
+      <Data Name="LogonId">0x160839</Data>
+      <Data Name="TerminalSessionId">1</Data>
+      <Data Name="IntegrityLevel">Medium</Data>
+      <Data Name="Hashes">SHA1=2A3B4C5D6E7F8091A2B3C4D5E6F70819,MD5=3B4C5D6E7F8091A2B3C4D5E6F708192,SHA256=4C5D6E7F8091A2B3C4D5E6F70819A2B3C4D5E6F70819A2B3C4D5E6F70819A2B,IMPHASH=5D6E7F8091A2B3C4D5E6F70819A2B3C</Data>
+      <Data Name="ParentProcessGuid">{f3565dc0-e6d0-674c-cf07-000000000c00}</Data>
+      <Data Name="ParentProcessId">6108</Data>
+      <Data Name="ParentImage">C:\Windows\System32\cmd.exe</Data>
+      <Data Name="ParentCommandLine">"C:\WINDOWS\system32\cmd.exe"</Data>
+      <Data Name="ParentUser">CONDEF\pwhite</Data>
+   </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+      <EventID>1</EventID>
+      <Version>5</Version>
+      <Level>4</Level>
+      <Task>1</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8000000000000000</Keywords>
+      <TimeCreated SystemTime="2024-12-07T11:06:03.7745510Z" />
+      <EventRecordID>5611</EventRecordID>
+      <Correlation />
+      <Execution ProcessID="4028" ThreadID="5712" />
+      <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+      <Computer>acct-ws11.condef.local</Computer>
+      <Security UserID="S-1-5-18" />
+   </System>
+   <EventData>
+      <Data Name="RuleName">technique_id=T1018,technique_name=Remote System Discovery</Data>
+      <Data Name="UtcTime">2024-12-07 11:06:03.760</Data>
+      <Data Name="ProcessGuid">{f3565dc0-e6eb-674c-d907-000000000c00}</Data>
+      <Data Name="ProcessId">3204</Data>
+      <Data Name="Image">C:\Windows\System32\nltest.exe</Data>
+      <Data Name="FileVersion">10.0.26100.1882 (WinBuild.160101.0800)</Data>
+      <Data Name="Description">Windows NT LAN Manager Test Tool</Data>
+      <Data Name="Product">Microsoft® Windows® Operating System</Data>
+      <Data Name="Company">Microsoft Corporation</Data>
+      <Data Name="OriginalFileName">nltest.exe</Data>
+      <Data Name="CommandLine">nltest.exe /dclist:condef.local</Data>
+      <Data Name="CurrentDirectory">C:\Users\pwhite\</Data>
+      <Data Name="User">CONDEF\pwhite</Data>
+      <Data Name="LogonGuid">{f3565dc0-4c19-674c-3908-160000000000}</Data>
+      <Data Name="LogonId">0x160839</Data>
+      <Data Name="TerminalSessionId">1</Data>
+      <Data Name="IntegrityLevel">Medium</Data>
+      <Data Name="Hashes">SHA1=6E7F8091A2B3C4D5E6F70819A2B3C4D5E6F70819,MD5=7F8091A2B3C4D5E6F70819A2B3C4D5E,SHA256=8091A2B3C4D5E6F70819A2B3C4D5E6F70819A2B3C4D5E6F70819A2B3C4D5E6F,IMPHASH=91A2B3C4D5E6F70819A2B3C4D5E6F70</Data>
+      <Data Name="ParentProcessGuid">{f3565dc0-e6d0-674c-cf07-000000000c00}</Data>
+      <Data Name="ParentProcessId">6108</Data>
+      <Data Name="ParentImage">C:\Windows\System32\cmd.exe</Data>
+      <Data Name="ParentCommandLine">"C:\WINDOWS\system32\cmd.exe"</Data>
+      <Data Name="ParentUser">CONDEF\pwhite</Data>
+   </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+      <EventID>1</EventID>
+      <Version>5</Version>
+      <Level>4</Level>
+      <Task>1</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8000000000000000</Keywords>
+      <TimeCreated SystemTime="2024-12-07T11:07:52.3391870Z" />
+      <EventRecordID>5613</EventRecordID>
+      <Correlation />
+      <Execution ProcessID="4028" ThreadID="5715" />
+      <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+      <Computer>acct-ws11.condef.local</Computer>
+      <Security UserID="S-1-5-18" />
+   </System>
+   <EventData>
+      <Data Name="RuleName">technique_id=T1046,technique_name=Network Service Discovery</Data>
+      <Data Name="UtcTime">2024-12-07 11:07:52.320</Data>
+      <Data Name="ProcessGuid">{f3565dc0-e740-674c-da07-000000000c00}</Data>
+      <Data Name="ProcessId">3388</Data>
+      <Data Name="Image">C:\Windows\System32\PING.EXE</Data>
+      <Data Name="FileVersion">10.0.26100.1882 (WinBuild.160101.0800)</Data>
+      <Data Name="Description">TCP/IP Ping Command</Data>
+      <Data Name="Product">Microsoft® Windows® Operating System</Data>
+      <Data Name="Company">Microsoft Corporation</Data>
+      <Data Name="OriginalFileName">PING.EXE</Data>
+      <Data Name="CommandLine">ping.exe -n 1 10.10.8.15</Data>
+      <Data Name="CurrentDirectory">C:\Users\pwhite\</Data>
+      <Data Name="User">CONDEF\pwhite</Data>
+      <Data Name="LogonGuid">{f3565dc0-4c19-674c-3908-160000000000}</Data>
+      <Data Name="LogonId">0x160839</Data>
+      <Data Name="TerminalSessionId">1</Data>
+      <Data Name="IntegrityLevel">Medium</Data>
+      <Data Name="Hashes">SHA1=A2B3C4D5E6F70819A2B3C4D5E6F70819A2B3C4D,MD5=B3C4D5E6F70819A2B3C4D5E6F70819A,SHA256=C4D5E6F70819A2B3C4D5E6F70819A2B3C4D5E6F70819A2B3C4D5E6F70819A2B,IMPHASH=D5E6F70819A2B3C4D5E6F70819A2B3C</Data>
+      <Data Name="ParentProcessGuid">{f3565dc0-e6d0-674c-cf07-000000000c00}</Data>
+      <Data Name="ParentProcessId">6108</Data>
+      <Data Name="ParentImage">C:\Windows\System32\cmd.exe</Data>
+      <Data Name="ParentCommandLine">"C:\WINDOWS\system32\cmd.exe"</Data>
+      <Data Name="ParentUser">CONDEF\pwhite</Data>
+   </EventData>
+</Event>
+</Events>

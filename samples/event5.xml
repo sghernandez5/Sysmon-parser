@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+      <EventID>1</EventID>
+      <Version>5</Version>
+      <Level>4</Level>
+      <Task>1</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8000000000000000</Keywords>
+      <TimeCreated SystemTime="2024-12-05T08:33:19.9204410Z" />
+      <EventRecordID>5402</EventRecordID>
+      <Correlation />
+      <Execution ProcessID="4028" ThreadID="5519" />
+      <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+      <Computer>dev-build03.condef.local</Computer>
+      <Security UserID="S-1-5-18" />
+   </System>
+   <EventData>
+      <Data Name="RuleName"></Data>
+      <Data Name="UtcTime">2024-12-05 08:33:19.902</Data>
+      <Data Name="ProcessGuid">{f3565dc0-c33f-674c-b405-000000000c00}</Data>
+      <Data Name="ProcessId">8120</Data>
+      <Data Name="Image">C:\Program Files\Git\bin\git.exe</Data>
+      <Data Name="FileVersion">2.46.0.windows.1</Data>
+      <Data Name="Description">Git for Windows</Data>
+      <Data Name="Product">Git</Data>
+      <Data Name="Company">The Git Development Community</Data>
+      <Data Name="OriginalFileName">git.exe</Data>
+      <Data Name="CommandLine">git.exe pull origin main</Data>
+      <Data Name="CurrentDirectory">C:\Users\dbuild\repos\sysmon-parser\</Data>
+      <Data Name="User">CONDEF\dbuild</Data>
+      <Data Name="LogonGuid">{f3565dc0-6a02-674c-2c06-160000000000}</Data>
+      <Data Name="LogonId">0x16062c</Data>
+      <Data Name="TerminalSessionId">1</Data>
+      <Data Name="IntegrityLevel">Medium</Data>
+      <Data Name="ParentProcessGuid">{f3565dc0-c330-674c-a105-000000000c00}</Data>
+      <Data Name="ParentProcessId">7744</Data>
+      <Data Name="ParentImage">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+      <Data Name="ParentCommandLine">powershell.exe -NoExit</Data>
+      <Data Name="ParentUser">CONDEF\dbuild</Data>
+   </EventData>
+</Event>
