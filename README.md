@@ -9,10 +9,10 @@ A small Python tool that extracts key fields from Sysmon **Event ID 1 (Process C
 ## Usage
 
 ```
-python parser.py <path-to-sysmon-xml> [--image SUBSTRING] [--user USER] [--integrity-level {High,Medium,Low,System}]
+python parser.py <path-to-sysmon-xml> [--image SUBSTRING] [--user USER] [--integrity-level {High,Medium,Low,System}] [--format {json,jsonl,csv}] [--stats]
 ```
 
-If a single event matches, the output is a JSON object. If multiple events match, the output is a JSON array. If none match, the output is `[]`.
+With the default `--format json`: a single matching event prints as a JSON object, multiple events print as a JSON array, and no matches print `[]`. `--format jsonl` prints one JSON object per line (handy for piping into tools like `jq` line-by-line, or streaming). `--format csv` prints a header row followed by one row per event, always — no collapsing.
 
 ### Examples
 
@@ -45,6 +45,35 @@ Filters combine with AND — this returns only events matching *both* conditions
 ```
 python parser.py samples/multi_events.xml --user "CONDEF\pwhite" --image ping
 ```
+
+One JSON object per line, for streaming/piping:
+
+```
+python parser.py samples/multi_events.xml --format jsonl
+```
+
+CSV, for spreadsheets or grep-based review:
+
+```
+python parser.py samples/multi_events.xml --format csv
+```
+
+Quick summary of what's in a file — total events, unique processes/users, and an IntegrityLevel breakdown — instead of the events themselves. Filters still apply, so you can scope the summary (e.g. stats for just one user):
+
+```
+python parser.py samples/multi_events.xml --stats
+```
+
+```json
+{
+  "total_events": 3,
+  "unique_images": {"count": 3, "values": ["C:\\Windows\\System32\\PING.EXE", "C:\\Windows\\System32\\net.exe", "C:\\Windows\\System32\\nltest.exe"]},
+  "unique_users": {"count": 1, "values": ["CONDEF\\pwhite"]},
+  "events_by_integrity_level": {"Medium": 3}
+}
+```
+
+`--stats` always outputs this JSON summary regardless of `--format` — it takes priority if both are given.
 
 ## Output fields
 
