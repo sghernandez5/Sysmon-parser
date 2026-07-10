@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "hayabusa": {
-      "command": "C:\\Users\\Sofia\\AppData\\Local\\Python\\bin\\python.exe",
+      "command": "py",
       "args": ["server.py"]
     }
   }

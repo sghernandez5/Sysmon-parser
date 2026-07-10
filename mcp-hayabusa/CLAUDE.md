@@ -38,5 +38,5 @@ Both tools share the truncation pattern deliberately: report the true total, cap
 
 ## Client configuration
 
-- **Claude Code**: auto-discovers `.mcp.json` in this directory (`command: "python"`) — no manual setup needed when working in this folder. Keep `.mcp.json`'s command as the bare `python` (relying on PATH), not an absolute path — an absolute path would be specific to one contributor's machine and break for everyone else.
+- **Claude Code**: auto-discovers `.mcp.json` in this directory (`command: "py"`) — no manual setup needed when working in this folder. Keep `.mcp.json`'s command as `py` on Windows, not an absolute interpreter path — an absolute path is specific to one contributor's machine and breaks for everyone else. `py` (not bare `python`) is deliberate: on Windows, `python` can resolve to a dead Microsoft Store execution-alias stub depending on PATH ordering, while the `py` launcher resolves the real interpreter via the registry regardless of PATH.
 - **Claude Desktop**: a separate app with no project-folder concept, so it needs its own server registration (its "Claude Code" mode auto-discovers `.mcp.json` like Claude Code does; its chat mode needs the server added to Desktop's own local config, using **absolute paths** for both the interpreter and `server.py`, since that config is machine-specific and never committed to this repo).
