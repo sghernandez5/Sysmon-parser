@@ -2,6 +2,8 @@
 
 A small Python tool that extracts key fields from Sysmon **Event ID 1 (Process Creation)** XML events and prints them as JSON.
 
+This repo also contains [`mcp-hayabusa/`](mcp-hayabusa/), a separate MCP server that wraps the [Hayabusa](https://github.com/Yamato-Security/hayabusa) CLI for scanning real `.evtx` (Windows Event Log) files — see [`mcp-hayabusa/README.md`](mcp-hayabusa/README.md). The two tools are independent: `parser.py` works on hand-written Sysmon XML fixtures in `samples/`, while `mcp-hayabusa` works on real binary EVTX exports.
+
 ## Requirements
 
 - Python 3 (stdlib only — no dependencies to install)
