@@ -10,9 +10,9 @@ An MCP (Model Context Protocol) server (`server.py`, stdlib + `mcp` + `pyyaml`) 
 
 ```
 pip install -r requirements.txt
-py download_hayabusa.py      # fetches the latest Hayabusa release for this platform into ./hayabusa/
-py server.py                 # run the MCP server directly (normally launched by an MCP client via .mcp.json)
-py test_server.py            # manual smoke test — imports server.py and calls both tools directly against samples/
+python download_hayabusa.py  # fetches the latest Hayabusa release for this platform into ./hayabusa/
+python server.py             # run the MCP server directly (normally launched by an MCP client via .mcp.json)
+python test_server.py        # manual smoke test — imports server.py and calls both tools directly against samples/
 ```
 
 There is no automated test suite — verify changes with `test_server.py` against `samples/discovery_bloodhound.evtx`.
@@ -38,5 +38,5 @@ Both tools share the truncation pattern deliberately: report the true total, cap
 
 ## Client configuration
 
-- **Claude Code**: auto-discovers `.mcp.json` in this directory (`command: "py"`) — no manual setup needed when working in this folder. Keep `.mcp.json`'s command as `py` on Windows, not an absolute interpreter path — an absolute path is specific to one contributor's machine and breaks for everyone else. `py` (not bare `python`) is deliberate: on Windows, `python` can resolve to a dead Microsoft Store execution-alias stub depending on PATH ordering, while the `py` launcher resolves the real interpreter via the registry regardless of PATH.
+- **Claude Code**: auto-discovers `.mcp.json` in this directory (`command: "python"`) — no manual setup needed when working in this folder. Keep `.mcp.json`'s command as a bare `python`/`py`, not an absolute interpreter path — an absolute path is specific to one contributor's machine and breaks for everyone else. Which bare command is reliable depends on how Python is installed on the machine, and that has flipped once already: with the classic installer, `python` could resolve to a dead Microsoft Store execution-alias stub while the `py` launcher reliably found the real interpreter via the registry; with the newer Python Installation Manager (`PythonSoftwareFoundation.PythonManager`), it's the reverse — `python` resolves correctly but `py.exe` only ships inside a versioned package folder that isn't exposed on PATH, so `py` fails outright (MCP client reports this as a generic reconnect error, e.g. `-32000`, since the server process can't even spawn). If the server won't launch, check `Get-Command py`/`Get-Command python` in a fresh shell to see which one actually resolves on that machine before assuming the config is stale.
 - **Claude Desktop**: a separate app with no project-folder concept, so it needs its own server registration (its "Claude Code" mode auto-discovers `.mcp.json` like Claude Code does; its chat mode needs the server added to Desktop's own local config, using **absolute paths** for both the interpreter and `server.py`, since that config is machine-specific and never committed to this repo).
