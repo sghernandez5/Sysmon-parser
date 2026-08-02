@@ -1,0 +1,9 @@
+# Downloaded by download_hayabusa.py — a versioned third-party binary + rule set
+# (also contains a nested .git/ for the rules repo, which breaks a plain `git add`)
+hayabusa/
+
+__pycache__/
+*.pyc
+
+# Real Windows Event Log export — contains this machine's actual hostname/users/SIDs
+samples/security_live.evtx

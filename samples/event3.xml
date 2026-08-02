@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+      <EventID>1</EventID>
+      <Version>5</Version>
+      <Level>4</Level>
+      <Task>1</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8000000000000000</Keywords>
+      <TimeCreated SystemTime="2024-12-03T21:47:52.6631180Z" />
+      <EventRecordID>5209</EventRecordID>
+      <Correlation />
+      <Execution ProcessID="4028" ThreadID="5301" />
+      <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+      <Computer>hr-laptop14.condef.local</Computer>
+      <Security UserID="S-1-5-18" />
+   </System>
+   <EventData>
+      <Data Name="RuleName">technique_id=T1218.011,technique_name=Rundll32</Data>
+      <Data Name="UtcTime">2024-12-03 21:47:52.640</Data>
+      <Data Name="ProcessGuid">{f3565dc0-9c48-674c-9203-000000000c00}</Data>
+      <Data Name="ProcessId">2916</Data>
+      <Data Name="Image">C:\Windows\System32\rundll32.exe</Data>
+      <Data Name="FileVersion">10.0.26100.1882 (WinBuild.160101.0800)</Data>
+      <Data Name="Description">Windows host process (Rundll32)</Data>
+      <Data Name="Product">Microsoft® Windows® Operating System</Data>
+      <Data Name="Company">Microsoft Corporation</Data>
+      <Data Name="OriginalFileName">RUNDLL32.EXE</Data>
+      <Data Name="CommandLine">rundll32.exe C:\Users\mreyes\AppData\Local\Temp\update_svc.dll,DllRegisterServer</Data>
+      <Data Name="CurrentDirectory">C:\Users\mreyes\AppData\Local\Temp\</Data>
+      <Data Name="User">CONDEF\mreyes</Data>
+      <Data Name="LogonGuid">{f3565dc0-3a71-674c-9c02-160000000000}</Data>
+      <Data Name="LogonId">0x16029c</Data>
+      <Data Name="TerminalSessionId">1</Data>
+      <Data Name="IntegrityLevel">Medium</Data>
+      <Data Name="Hashes">SHA1=E4D3C2B1A0918273645546372819A0B1C2D3E4F,MD5=6F5E4D3C2B1A09182736455463728190,SHA256=1B2C3D4E5F60718293A4B5C6D7E8F90A1B2C3D4E5F60718293A4B5C6D7E8F9,IMPHASH=A9B8C7D6E5F40312291807F6E5D4C3B</Data>
+      <Data Name="ParentProcessGuid">{f3565dc0-9c40-674c-8f03-000000000c00}</Data>
+      <Data Name="ParentProcessId">6620</Data>
+      <Data Name="ParentImage">C:\Windows\System32\cmd.exe</Data>
+      <Data Name="ParentCommandLine">cmd.exe /c "update_svc.dll"</Data>
+      <Data Name="ParentUser">CONDEF\mreyes</Data>
+   </EventData>
+</Event>

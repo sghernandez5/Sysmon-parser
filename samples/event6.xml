@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+      <EventID>1</EventID>
+      <Version>5</Version>
+      <Level>4</Level>
+      <Task>1</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8000000000000000</Keywords>
+      <TimeCreated SystemTime="2024-12-06T02:11:04.5590330Z" />
+      <EventRecordID>5487</EventRecordID>
+      <Correlation />
+      <Execution ProcessID="4028" ThreadID="5602" />
+      <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+      <Computer>dc01.condef.local</Computer>
+      <Security UserID="S-1-5-18" />
+   </System>
+   <EventData>
+      <Data Name="RuleName">technique_id=T1543.003,technique_name=Windows Service</Data>
+      <Data Name="UtcTime">2024-12-06 02:11:04.551</Data>
+      <Data Name="ProcessGuid">{f3565dc0-d838-674c-c706-000000000c00}</Data>
+      <Data Name="ProcessId">832</Data>
+      <Data Name="Image">C:\Windows\System32\svchost.exe</Data>
+      <Data Name="FileVersion">10.0.26100.1882 (WinBuild.160101.0800)</Data>
+      <Data Name="Description">Host Process for Windows Services</Data>
+      <Data Name="Product">Microsoft® Windows® Operating System</Data>
+      <Data Name="Company">Microsoft Corporation</Data>
+      <Data Name="OriginalFileName">svchost.exe</Data>
+      <Data Name="CommandLine">C:\Windows\system32\svchost.exe -k netsvcs -p -s Schedule</Data>
+      <Data Name="CurrentDirectory">C:\Windows\system32\</Data>
+      <Data Name="User">NT AUTHORITY\SYSTEM</Data>
+      <Data Name="LogonGuid">{f3565dc0-0000-674c-e703-000000000000}</Data>
+      <Data Name="LogonId">0x3e7</Data>
+      <Data Name="TerminalSessionId">0</Data>
+      <Data Name="IntegrityLevel">System</Data>
+      <Data Name="Hashes">SHA1=1F2E3D4C5B6A798807162534465768798A9B0C1,MD5=0F1E2D3C4B5A69788796A5B4C3D2E1F,SHA256=A0B1C2D3E4F5061728394A5B6C7D8E9F0A1B2C3D4E5F60718293A4B5C6D7E8,IMPHASH=D4C3B2A190807F6E5D4C3B2A19080706</Data>
+      <Data Name="ParentProcessGuid">{f3565dc0-0000-674c-e703-000000000c00}</Data>
+      <Data Name="ParentProcessId">704</Data>
+      <Data Name="ParentImage">C:\Windows\System32\services.exe</Data>
+      <Data Name="ParentUser">NT AUTHORITY\SYSTEM</Data>
+   </EventData>
+</Event>

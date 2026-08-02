@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+      <EventID>1</EventID>
+      <Version>5</Version>
+      <Level>4</Level>
+      <Task>1</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8000000000000000</Keywords>
+      <TimeCreated SystemTime="2024-12-04T13:02:08.4417720Z" />
+      <EventRecordID>5311</EventRecordID>
+      <Correlation />
+      <Execution ProcessID="4028" ThreadID="5412" />
+      <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+      <Computer>mkt-desk22.condef.local</Computer>
+      <Security UserID="S-1-5-18" />
+   </System>
+   <EventData>
+      <Data Name="UtcTime">2024-12-04 13:02:08.430</Data>
+      <Data Name="ProcessGuid">{f3565dc0-b0d0-674c-a304-000000000c00}</Data>
+      <Data Name="ProcessId">5488</Data>
+      <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+      <Data Name="FileVersion">10.0.26100.1882 (WinBuild.160101.0800)</Data>
+      <Data Name="Description">Notepad</Data>
+      <Data Name="Product">Microsoft® Windows® Operating System</Data>
+      <Data Name="Company">Microsoft Corporation</Data>
+      <Data Name="OriginalFileName">NOTEPAD.EXE</Data>
+      <Data Name="CommandLine">"C:\Windows\System32\notepad.exe" C:\Users\kwong\Documents\notes.txt</Data>
+      <Data Name="CurrentDirectory">C:\Users\kwong\Documents\</Data>
+      <Data Name="User">CONDEF\kwong</Data>
+      <Data Name="LogonGuid">{f3565dc0-1f88-674c-1305-160000000000}</Data>
+      <Data Name="LogonId">0x160513</Data>
+      <Data Name="TerminalSessionId">1</Data>
+      <Data Name="IntegrityLevel">Medium</Data>
+      <Data Name="Hashes">SHA1=9988776655443322110099887766554433221100,MD5=AABBCCDDEEFF00112233445566778899,SHA256=00112233445566778899AABBCCDDEEFF00112233445566778899AABBCCDDEE,IMPHASH=1122334455667788990011223344556</Data>
+      <Data Name="ParentProcessGuid">{f3565dc0-b0c8-674c-9704-000000000c00}</Data>
+      <Data Name="ParentProcessId">4012</Data>
+      <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+      <Data Name="ParentCommandLine">C:\Windows\Explorer.EXE</Data>
+      <Data Name="ParentUser">CONDEF\kwong</Data>
+   </EventData>
+</Event>

