@@ -1,0 +1,26 @@
+title: Windows Security Event Log Cleared
+id: b6e1a2b4-2f3a-4a49-9c2b-7e2f6a8c9d10
+status: experimental
+description: |
+    Detects EventID 1102, logged when the Windows Security event log is
+    cleared. Legitimate log rotation/retention rarely uses this mechanism;
+    it's commonly an attacker or operator covering their tracks after
+    activity that would otherwise be visible in the Security log.
+references:
+    - https://attack.mitre.org/techniques/T1070/001/
+author: detection-workflow (portfolio project)
+date: 2026-08-02
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        Provider_Name: 'Microsoft-Windows-Eventlog'
+        EventID: 1102
+    condition: selection
+falsepositives:
+    - Legitimate log archiving/rotation tooling that clears logs after export
+level: medium
+tags:
+    - attack.defense_evasion
+    - attack.t1070.001
