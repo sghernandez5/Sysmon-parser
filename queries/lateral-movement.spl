@@ -1,0 +1,12 @@
+index=sysmon
+    ((EventCode=1 (Image="*\\PsExec*.exe" OR Image="*\\paexec*.exe" OR CommandLine="*\\\\*\\ADMIN$*" OR CommandLine="*\\\\*\\C$*")) OR
+     (EventCode=7045 (ServiceFileName="*\\PSEXESVC.exe" OR ServiceName="PSEXESVC")) OR
+     (EventCode=3 DestinationPort=445) OR
+     (EventCode=5140 ShareName="ADMIN$") OR (EventCode=5140 ShareName="C$"))
+| eval technique=case(
+    EventCode=1, "T1570 / T1021.002 (Remote service tooling)",
+    EventCode=7045, "T1569.002 (Service Execution)",
+    EventCode=3, "T1021.002 (SMB session setup)",
+    EventCode=5140, "T1021.002 (Admin share access)")
+| table _time, ComputerName, User, Image, CommandLine, DestinationIp, DestinationPort, ShareName, ServiceName, technique
+| sort - _time

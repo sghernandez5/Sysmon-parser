@@ -1,0 +1,5 @@
+index=sysmon (EventCode=10 TargetImage="*\\lsass.exe" (GrantedAccess="0x1010" OR GrantedAccess="0x1410" OR GrantedAccess="0x1438" OR GrantedAccess="0x143a" OR GrantedAccess="0x1fffff"))
+OR (EventCode=1 (CommandLine="*sekurlsa*" OR CommandLine="*mimikatz*" OR CommandLine="*logonpasswords*" OR CommandLine="*lsadump*" OR CommandLine="*privilege::debug*"))
+| eval technique=if(EventCode=10, "T1003.001 (LSASS Memory)", "T1003.001 (Mimikatz command-line)")
+| table _time, ComputerName, User, Image, TargetImage, GrantedAccess, CommandLine, technique
+| sort - _time
